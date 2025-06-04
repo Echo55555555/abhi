@@ -1,0 +1,55 @@
+/* Full Page Center Alignment */
+body {
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+}
+
+/* Center the text */
+h1 {
+    font-size: 2em;
+    color: white;
+    text-shadow: 3px 3px 5px black;
+    opacity: 0; /* Initially hidden */
+    position: relative;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Button Styling */
+button {
+    padding: 15px 25px;
+    font-size: 20px;
+    background-color: #ff4e50;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    color: white;
+    box-shadow: 3px 3px 6px black;
+}
+
+button:hover {
+    background-color: #fc913a;
+}
+
+/* Popper Burst Effect */
+.popper {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: radial-gradient(circle, #fc67fa, #ff8b6a);
+    border-radius: 50%;
+    animation: burst 1.5s ease-out forwards;
+}
+
+/* Burst Animation */
+@keyframes burst {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(5); opacity: 0.7; }
+    100% { transform: scale(0); opacity: 0; }
+}
